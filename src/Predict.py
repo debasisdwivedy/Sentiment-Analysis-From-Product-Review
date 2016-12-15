@@ -50,7 +50,6 @@ if __name__ == '__main__':
     # Optimized Results
     best_alpha, best_min_df = optimize(review)
     trainSystem_optimized(review, best_min_df, best_alpha)
-    # calibration_plot(clf, X, Y)
 
 
     ################ SVM ###########################################
@@ -60,9 +59,6 @@ if __name__ == '__main__':
     ################ Word 2 Vector ###########################################
 
     Review_train, Review_test = train_test_split(review, train_size=0.75)
-
-    # clean_train_reviews = getCleanReviews(Review_train)
-    # clean_test_reviews = getCleanReviews(Review_test)
 
     clean_train_reviews = []
     for review in Review_train['Review']:
@@ -187,6 +183,7 @@ if __name__ == '__main__':
     printResult(test, y_bdv)
 
     ###################### BOW + Random Forest ##########################################
+
     clean_train_reviews = []
     for review in Review_train['Review']:
         clean_train_reviews.append(optimizeFeatures(review, True))
@@ -196,5 +193,5 @@ if __name__ == '__main__':
         clean_test_reviews.append(optimizeFeatures(review, True))
 
     vectorizer, train_data_features = BOW_Scikit_learn(clean_train_reviews)
-    RandomForestImpl(vectorizer, train_data_features, clean_test_reviews)
+    RandomForestImpl(vectorizer, train_data_features, clean_test_reviews,Review_train,Review_test)
 

@@ -185,7 +185,7 @@ def BOW_Scikit_learn(clean_train_reviews):
 
     return vectorizer,train_data_features
 
-def RandomForestImpl(vectorizer,train_data_features,clean_test_reviews):
+def RandomForestImpl(vectorizer,train_data_features,clean_test_reviews,train,test):
     print("Training the random forest...")
     forest = RandomForestClassifier(n_estimators=100)
     forest = forest.fit(train_data_features, train["Rating"])
@@ -251,4 +251,4 @@ if __name__ == '__main__':
 
     vectorizer,train_data_features = BOW_Scikit_learn(clean_train_reviews)
 
-    RandomForestImpl(vectorizer,train_data_features,clean_test_reviews)
+    RandomForestImpl(vectorizer,train_data_features,clean_test_reviews,train,test)
