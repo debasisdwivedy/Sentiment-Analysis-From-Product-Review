@@ -40,7 +40,7 @@ if __name__ == '__main__':
     num_products = review[['Product_ID']].drop_duplicates().shape[0]
     num_reviews = review.shape[0]
 
-    print('number of critics:', num_critics)
+    print('number of reviewers:', num_critics)
     print('number of products:', num_products)
     print('number of reviews:', num_reviews)
 

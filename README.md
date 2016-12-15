@@ -5,7 +5,7 @@ INSTRUCTION SET
    
 Requirements  
 Python 3.5  
-Cython     
+Cython(optional)       
 NLTK       
 Gensim    
 Scikit-learn 0.19     
