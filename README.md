@@ -5,12 +5,12 @@ INSTRUCTION SET
    
 Requirements  
 Python 3.5  
-Cython  
-NLTK 
-Gensim 
-Scikit-learn 0.19  
-pandas 0.19  
-matplotlib  
+Cython     
+NLTK       
+Gensim    
+Scikit-learn 0.19     
+pandas 0.19    
+matplotlib     
 Numpy  
 Scipy 
     
